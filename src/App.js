@@ -1,5 +1,6 @@
 import './App.css';
 import ShopItemFunc from './components/ShopItemFunc';
+import ShopItemClass from './components/ShopItemClass';
 import ShopItem from './types/ShopItem';
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="window">
-          <ShopItemFunc item={item} />
+          <ShopItemClass item={item} />
         </div>
       </div>
     </div>
