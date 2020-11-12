@@ -2,6 +2,9 @@ import './App.css';
 import ShopItemFunc from './components/ShopItemFunc';
 import ShopItemClass from './components/ShopItemClass';
 import ShopItem from './types/ShopItem';
+import Calendar from './components/Calendar';
+import moment from 'moment';
+import initMoment from './utils/initMoment';
 
 function App() {
   const item = new ShopItem(
@@ -12,6 +15,9 @@ function App() {
     399,
     '£'
   );
+
+  initMoment();
+  const now = moment();
   
   return (
     <div>
@@ -36,6 +42,9 @@ function App() {
         <div className="window">
           <ShopItemClass item={item} />
         </div>
+      </div>
+      <div className="container-calendar">
+        <Calendar date={now} />
       </div>
     </div>
   );
